@@ -1,0 +1,41 @@
+{
+  "ConnectionStrings": {
+    "DevTest": "Server=localhost;Port=3306;Database=waternav_log;User=waternav_app;Password=waternav_pw;"
+  },
+  "Serilog": {
+    "LevelSwitches": { "$controlSwitch": "Verbose" },
+    "MinimumLevel": { "ControlledBy": "$controlSwitch" },
+    "WriteTo": [
+      {
+        "Name": "MySql",
+        "Args": {
+          "connectionString": "DevTest",
+          "tableName": "TestLogs",
+          "schemaName": null,
+          "needAutoCreateTable": true,
+          "loggerColumnOptions": {
+            "Id": {
+              "Name": "IdAutoIncrement"
+            },
+            "TimeStamp": {
+              "Name": "Timestamp"
+            },
+            "LogEvent": {
+              "Name": "Properties"
+            }
+          },
+          "loggerPropertyColumnOptions": {
+            "TestColumnName": {
+              "Format": "{0}",
+              "Name": "TestProperty",
+              "WriteMethod": "Raw",
+              "DbType": "Text"
+            }
+          },
+          "period": "0.00:00:30",
+          "batchSizeLimit": 50
+        }
+      }
+    ]
+  }
+}

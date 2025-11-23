@@ -1,0 +1,42 @@
+{
+  "Serilog": {
+    "LevelSwitches": { "$controlSwitch": "Verbose" },
+    "MinimumLevel": { "ControlledBy": "$controlSwitch" },
+    "WriteTo": [
+      {
+        "Name": "MySql",
+        "Args": {
+          "connectionString": "Server=localhost;Port=3306;Database=waternav_log;User=waternav_app;Password=waternav_pw;",
+          "tableName": "ConfigLogs3",
+          "schemaName": null,
+          "needAutoCreateTable": true,
+          "loggerColumnOptions": {
+            "Id": {
+              "Name": "IdAutoIncrement",
+              "Order": 0
+            },
+            "TimeStamp": {
+              "Name": "Timestamp",
+              "Order": 2
+            },
+            "LogEvent": {
+              "Name": "LogEvent",
+              "Order": 3
+            }
+          },
+          "loggerPropertyColumnOptions": {
+            "TestColumnName": {
+              "Format": "{0}",
+              "Name": "TestProperty",
+              "WriteMethod": "Raw",
+              "DbType": "Text",
+              "Order": 1
+            }
+          },
+          "period": "0.00:00:30",
+          "batchSizeLimit": 50
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36301.6
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Serilog.Sinks.MySql", "src\Serilog.Sinks.MySql\Serilog.Sinks.MySql.csproj", "{7CF2F291-2AD2-3B0E-7D43-114F21940F33}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Serilog.Sinks.MySql.IntegrationTests", "tests\Serilog.Sinks.MySql.IntegrationTests\Serilog.Sinks.MySql.IntegrationTests.csproj", "{2D719730-DB35-42DF-81F4-D2230D55484E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7CF2F291-2AD2-3B0E-7D43-114F21940F33}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7CF2F291-2AD2-3B0E-7D43-114F21940F33}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7CF2F291-2AD2-3B0E-7D43-114F21940F33}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7CF2F291-2AD2-3B0E-7D43-114F21940F33}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2D719730-DB35-42DF-81F4-D2230D55484E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D719730-DB35-42DF-81F4-D2230D55484E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2D719730-DB35-42DF-81F4-D2230D55484E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D719730-DB35-42DF-81F4-D2230D55484E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {78803E91-98A9-4E60-97E7-B1F6F7B7EF81}
+	EndGlobalSection
+EndGlobal
